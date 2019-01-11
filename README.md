@@ -2,4 +2,8 @@
 
 Run npm install
 
-once the node modules are installed successfully, run npm start to run node server on port 8080
+Run npm run build
+
+package will be in bundle folder
+
+Jenkins pipeline should copy the bundle folder content into the root location of the server where the application will be run(Tomcat).
