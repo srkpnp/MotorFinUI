@@ -14,14 +14,15 @@ class App extends Component {
   }
 
   getMyOptions(criteria) {
-    console.log(criteria);
-    console.log(JSON.stringify(criteria));
-    fetch("http://demo8969103.mockable.io/mock")
+    let request = JSON.stringify(criteria.criteria);
+    fetch("http://demo8969103.mockable.io/mockpost", {
+      method: 'post',
+      body: request
+    })
       .then(results => {
         return results.json();
       })
       .then(resultsJson => {
-        console.log(resultsJson);
         this.setState({ visibleOptions: resultsJson.products });
       });
   }
@@ -29,8 +30,8 @@ class App extends Component {
   render() {
     return (
       <div style={divStyle}>
-          <Search addOptions={this.getMyOptions} />
-          <MyOptions options={this.state.visibleOptions} />
+        <Search addOptions={this.getMyOptions} />
+        <MyOptions options={this.state.visibleOptions} />
       </div>
     );
   }

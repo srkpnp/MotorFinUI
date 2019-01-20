@@ -6,11 +6,16 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build& Deploy') {
+        stage('Build') {
             steps {
                 sh '''npm install
-                npm run start'''
+                npm run build'''
+            }
+        }
+       stage('Deploy') {
+            steps {
+                sh "cp -r $workspace/bundle /opt/apache-tomcat-8.5.37/webapps/"
             }
         }
     }
-}
+} 
