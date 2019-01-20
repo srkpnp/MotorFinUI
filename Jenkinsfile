@@ -14,7 +14,7 @@ pipeline {
         }
        stage('Deploy') {
             steps {
-                sh "cp -r $workspace/bundle /opt/apache-tomcat-8.5.37/webapps/"
+                sh "cp -rf $workspace/bundle /opt/apache-tomcat-8.5.37/webapps/"
             }
         }
     }
