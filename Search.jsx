@@ -51,7 +51,7 @@ class Search extends Component {
                 <div class="form-row panel-body">
                     <div class="form-group col col-md-3">
                         <label for="input1">Dealer Number:</label>
-                        <input onChange={this.onInputChange} type="number" name="dealerNo" value={this.state.criteria.dealerNo} class="form-control" id="input1" placeholder="Dealer Number" />
+                        <input onChange={this.onInputChange} type="text" name="dealerNo" value={this.state.criteria.dealerNo} class="form-control" id="input1" placeholder="Dealer Number" />
                     </div>
                     <div class="form-group col col-md-3">
                         <label for="input2">Goods Code:</label>

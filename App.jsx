@@ -14,16 +14,36 @@ class App extends Component {
   }
 
   getMyOptions(criteria) {
-    let request = JSON.stringify(criteria.criteria);
-    fetch("http://demo8969103.mockable.io/mockpost", {
+    let screenInputs = Object.assign({},criteria.criteria);
+    if (!screenInputs.dealerNo || !screenInputs.goodsCode) {
+      screenInputs.dealerNo = 1;
+      screenInputs.goodsCode = 1;
+    }
+    let request = JSON.stringify(screenInputs);
+    fetch("http://35.176.87.139:3000/create", {
       method: 'post',
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: request
     })
       .then(results => {
         return results.json();
       })
       .then(resultsJson => {
-        this.setState({ visibleOptions: resultsJson.products });
+        let resultsValue = [];
+        if (resultsJson instanceof Array) {
+          resultsJson.map((value) => {
+            if (value.productname) {
+              resultsValue.push(value);
+            }
+          });
+          this.setState({ visibleOptions: resultsValue });
+        }
+        else {
+          resultsValue.push(resultsJson);
+          this.setState({ visibleOptions: resultsValue });
+        }
       });
   }
 
