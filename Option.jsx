@@ -38,7 +38,7 @@ class Option extends Component {
         this.setState({ data: true });
     }
     render() {
-        return (<div class="col-md-3" style={divStyle}><a onClick={this.handleClick} class="btn btn-default btn-lg" style={aStyle}>
+        return (<div style={divStyle}><a onClick={this.handleClick} class="btn btn-default btn-lg" style={aStyle}>
             <p style={p}>{this.props.productname}</p>{this.props.additionalText.map((additionalText, i) => <AdditionalText key={i} text={additionalText} />)}</a></div>);
     }
 }
