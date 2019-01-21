@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''cd /opt/apache-tomcat-8.5.37/bin
 ./shutdown.sh
-cp -rf /var/lib/jenkins/workspace/Test_Pipeline_FrontEnd/bundle /opt/apache-tomcat-8.5.37/webapps/
+cp -rf /var/lib/jenkins/workspace/Motor_Quote_Engine_Pipeline/bundle /opt/apache-tomcat-8.5.37/webapps/
 export JENKINS_NODE_COOKIE=dontKillMe
 ./startup.sh
 '''
