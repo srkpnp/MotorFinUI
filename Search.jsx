@@ -3,7 +3,6 @@ import { debug } from 'util';
 
 class Search extends Component {
     constructor(props) {
-        console.log("check");
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.onInputChange=this.onInputChange.bind(this);
