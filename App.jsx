@@ -16,7 +16,7 @@ class App extends Component {
   getMyOptions(criteria) {
     console.log(criteria);
     console.log(JSON.stringify(criteria));
-    fetch("http://demo8969103.mockable.io/mock")
+    fetch("https://3000-dot-9847278-dot-devshell.appspot.com/?authuser=schagantisri@gmail.com&password=y5mc47sri&environment_name=default&environment_id=default")
       .then(results => {
         return results.json();
       })
