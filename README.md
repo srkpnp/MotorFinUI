@@ -13,4 +13,5 @@ Request JSON
 
 {"criteria":{"dealerNo":"","goodsCode":"","scheme":"","dor":"","cash":"","term":"","cap":"","depo":"","exchange":"","plan":"","apr":"","others":""}}
 
-Test
+
+Test1
