@@ -18,7 +18,7 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "css-loader": "^2.0.0",
     "es2015": "0.0.0",
     "file-loader": "^2.0.0",
